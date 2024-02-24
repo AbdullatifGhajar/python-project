@@ -18,7 +18,7 @@ install:			## Install requirements
 .PHONY: setup
 setup: create-env install	## Create or update conda environment and install pre-commits
 	@echo "Installing pre-commit hooks"
-	@$(PIP) install pre-commit black isort flake8 pyproject-flake8 pytest
+	@$(PIP) install pre-commit black isort flake8 pyproject-flake8 mypy pytest
 	@$(PRE_COMMIT) pre-commit autoupdate
 	@$(PRE_COMMIT) install-hooks
 	@$(PRE_COMMIT) install

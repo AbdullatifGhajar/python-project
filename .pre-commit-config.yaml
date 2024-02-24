@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/ambv/black
-    rev: 23.12.1
+    rev: 24.2.0
     hooks:
       - id: black
 
@@ -20,6 +20,12 @@ repos:
     hooks:
       - id: isort
 
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'v1.8.0'
+    hooks:
+    -   id: mypy
+        args: [--strict]
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
@@ -38,7 +44,7 @@ repos:
         exclude: helper
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.15.0
+    rev: v3.15.1
     hooks:
       - id: pyupgrade
         args: [--py310-plus]
