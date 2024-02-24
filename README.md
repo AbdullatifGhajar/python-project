@@ -9,4 +9,4 @@ It includes:
 - a gitignore file with general ignored files and especially in a python project
 - pyproject file to config all linters/formatters and pytest
 - a test folder to put tests there
-- 
+-
